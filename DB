@@ -8,7 +8,33 @@ CREATE TABLE dbCharacters (
 
 DESCRIBE dbCharacters;
 
-SELECT * FROM dbCharacters;
+SELECT * FROM dbCharacters
+ORDER BY character_id ASC;
+
+
+
+SELECT *
+FROM dbCharacters
+ORDER BY character_id, race;
+
+
+SELECT name , race
+FROM dbCharacters
+ORDER BY name;
+
+
+UPDATE dbCharacters
+SET transformation = 'no'
+WHERE race = 'Namekian';
+
+
+
+UPDATE dbCharacters
+SET race = 'Sayian'
+WHERE name='Broly';
+
+DELETE FROM dbCharacters
+WHERE character_id = 9;
 
 INSERT INTO dbCharacters(name,race,transformation) VALUES('Picollo', 'Namekian', 'no');
 
@@ -25,6 +51,8 @@ INSERT INTO dbCharacters(name) VALUES('Broly');
 INSERT INTO dbCharacters (name,race,transformation)VALUES('Gohan','Half-breed','Yes');
 
 INSERT INTO dbCharacters(name,race,transformation) VALUES('Vegeta','Sayian','Yes');
+
+INSERT INTO dbCharacters(name,race,transformation) VALUES('Gogeta','Sayian','Yes');
 
 DROP TABLE dbCharacters;
 

@@ -1,0 +1,33 @@
+CREATE TABLE dbCharacters (
+   
+   character_id INT  AUTO_INCREMENT PRIMARY KEY UNIQUE NOT NULL,
+   name VARCHAR(30) NOT NULL,
+   race VARCHAR(20) DEFAULT 'unknown',
+   transformation VARCHAR(30) DEFAULT 'unknown'
+);
+
+DESCRIBE dbCharacters;
+
+SELECT * FROM dbCharacters;
+
+INSERT INTO dbCharacters(name,race,transformation) VALUES('Picollo', 'Namekian', 'no');
+
+INSERT INTO dbCharacters(name,race,transformation) VALUES('Goku','Sayian','Yes');
+
+INSERT INTO dbCharacters(name) VALUES('Goku_Black');
+
+INSERT INTO dbCharacters(name,race) VALUES('Gotenks jr','Sayian');
+
+INSERT INTO  dbCharacters(name,race,transformation) VALUES('Dende','Namekian','no');
+
+INSERT INTO dbCharacters(name) VALUES('Broly');
+
+INSERT INTO dbCharacters (name,race,transformation)VALUES('Gohan','Half-breed','Yes');
+
+INSERT INTO dbCharacters(name,race,transformation) VALUES('Vegeta','Sayian','Yes');
+
+DROP TABLE dbCharacters;
+
+
+
+

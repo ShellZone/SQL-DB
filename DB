@@ -9,9 +9,12 @@ CREATE TABLE dbCharacters (
 DESCRIBE dbCharacters;
 
 SELECT * FROM dbCharacters
+WHERE race = 'Namekian'
 ORDER BY character_id ASC;
 
-
+UPDATE dbCharacters
+SET race = 'Namekian'
+WHERE character_id = 1;
 
 SELECT *
 FROM dbCharacters
